@@ -1,0 +1,103 @@
+.pagination-container {
+  margin-top: 1rem;
+  display: flex;
+  list-style-type: none;
+  font-family: "Bai Jamjuree", sans-serif;
+
+  button {
+    background-color: none;
+    border: none;
+  }
+
+  .pagination-number {
+    display: flex;
+    align-items: center;
+    margin-inline: 1rem;
+    gap: 1.25rem;
+  }
+
+  .pagination-item {
+    display: flex;
+    gap: 1rem;
+    background: none;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1rem;
+
+    &.dots:hover {
+      background-color: transparent;
+      cursor: default;
+    }
+    &:hover {
+      // background-color: rgba(0, 0, 0, 0.04);
+      cursor: pointer;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // width: 1.3rem;
+      // height: 1.3rem;
+      // border-radius: 0.25rem;
+    }
+
+    &.selected {
+      background-color: rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.35rem;
+      height: 1.35rem;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+    }
+  }
+
+  .pagination-button {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e98100;
+    color: white;
+    border-radius: 0.5rem;
+
+    &:disabled {
+      background-color: #f2f4f7;
+    }
+
+    .arrow {
+      &::before {
+        position: relative;
+        /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+        content: "";
+        /* By using an em scale, the arrows will size with the font */
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+        border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+      }
+
+      &.left {
+        transform: rotate(-135deg) translate(-50%);
+      }
+
+      &.right {
+        transform: rotate(45deg);
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      .arrow::before {
+        border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+        border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+      }
+
+      &:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+}

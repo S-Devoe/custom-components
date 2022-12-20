@@ -39,7 +39,7 @@ const SelectDropdown = () => {
         options={countryNames}
         // to keep menu open while I inspect
 
-        menuIsOpen={true}
+        // menuIsOpen={true}
         value={selectedCountry}
         onChange={setSelectedCountry}
         isSearchable={true}
