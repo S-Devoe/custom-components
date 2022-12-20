@@ -1,4 +1,4 @@
-import Pagination from "./Pagination/pagination";
+import Pagination from "./Pagination/Pagination";
 import data from "../../data/mock-data.json";
 import "./style.scss";
 import { useMemo, useState } from "react";
